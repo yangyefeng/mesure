@@ -6,7 +6,7 @@
 #define MAX_SENSOR_COUNT 2
 struct environment_data var_environment_data;
 
-//int modbus485_sync_time=100000;
+int modbus485_sync_time=100000;
 modbus_t * mb;		//创建一个modbus_t类型的context，用来打开串口
 uint16_t modbus_buf[100];
 uint16_t slave_address;
