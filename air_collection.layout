@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="include/air_db.h" open="1" top="0" tabpos="13">
+		<Cursor position="137" topLine="0" />
+	</File>
+	<File name="include/air_modbus.h" open="1" top="0" tabpos="5">
+		<Cursor position="1345" topLine="10" />
+	</File>
+	<File name="include/config.h" open="1" top="0" tabpos="3">
+		<Cursor position="944" topLine="3" />
+	</File>
+	<File name="include/emsascommon.h" open="1" top="0" tabpos="4">
+		<Cursor position="495" topLine="0" />
+	</File>
+	<File name="include/log.h" open="1" top="0" tabpos="18">
+		<Cursor position="38" topLine="0" />
+	</File>
+	<File name="include/memento.h" open="1" top="0" tabpos="16">
+		<Cursor position="221" topLine="0" />
+	</File>
+	<File name="include/modbus.h" open="1" top="0" tabpos="2">
+		<Cursor position="1117" topLine="169" />
+	</File>
+	<File name="include/run4g.h" open="1" top="0" tabpos="11">
+		<Cursor position="1692" topLine="46" />
+	</File>
+	<File name="include/sinyd_time.h" open="1" top="0" tabpos="12">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="include/sqlite3.h" open="1" top="0" tabpos="8">
+		<Cursor position="13023" topLine="4427" />
+	</File>
+	<File name="include/sqlite3ext.h" open="1" top="0" tabpos="17">
+		<Cursor position="18655" topLine="351" />
+	</File>
+	<File name="src/air_db.c" open="1" top="1" tabpos="14">
+		<Cursor position="1463" topLine="139" />
+	</File>
+	<File name="src/config.c" open="1" top="0" tabpos="1">
+		<Cursor position="13310" topLine="470" />
+	</File>
+	<File name="src/main.c" open="1" top="0" tabpos="10">
+		<Cursor position="186" topLine="0" />
+	</File>
+	<File name="src/memento.c" open="1" top="0" tabpos="15">
+		<Cursor position="960" topLine="12" />
+	</File>
+	<File name="src/modbus.c" open="1" top="0" tabpos="6">
+		<Cursor position="563" topLine="0" />
+	</File>
+	<File name="src/run4g.c" open="1" top="0" tabpos="7">
+		<Cursor position="1515" topLine="71" />
+	</File>
+	<File name="src/time.c" open="1" top="0" tabpos="9">
+		<Cursor position="1329" topLine="107" />
+	</File>
+</CodeBlocks_layout_file>

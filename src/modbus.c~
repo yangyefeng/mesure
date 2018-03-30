@@ -1,0 +1,106 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include"air_modbus.h"
+#include"config.h"
+#define MAX_SENSOR_COUNT 2
+ struct environment_data var_environment_data;
+ 
+//int modbus485_sync_time=100000;
+    modbus_t * mb;		//创建一个modbus_t类型的context，用来打开串口
+uint16_t modbus_buf[100];
+uint16_t slave_address;
+ 
+//读设备地址
+char read_slave_address(void) 
+{
+	int res;
+	res = modbus_read_registers(mb, 8, 2, modbus_buf);
+	slave_address = (modbus_buf[0] << 8) + modbus_buf[1];
+	if (res)
+		 {
+		printf("%d \n", slave_address);
+		return 1;
+		}
+	
+	else
+		 {
+		return 0;
+		}
+}
+
+  
+//读空气环境数据
+char read_air_environment(struct environment_data *air_data) 
+{
+	int res;
+	switch (configInfo.factory_num) {
+	case 0:
+		res = modbus_read_registers(mb, 12, 4, modbus_buf);
+		/*
+		   air_data->particulate_matter_25= (float)(modbus_buf[0]<<8)+modbus_buf[1];
+		   air_data->particulate_matter_10= (float)(modbus_buf[2]<<8)+modbus_buf[3];
+		   air_data->temperature_value= (float)(modbus_buf[4]<<8)+modbus_buf[5];
+		   air_data->humidity_value= (float)(modbus_buf[6]<<8)+modbus_buf[7];
+		   air_data->wind_direction= (float)(modbus_buf[8]<<8)+modbus_buf[9];
+		   air_data->wind_speed_value= (float)(modbus_buf[10]<<8)+modbus_buf[11];
+		   air_data->noise_value= (float)(modbus_buf[12]<<8)+modbus_buf[13];
+		   air_data->atmospheric_pressure_value=(float)(modbus_buf[14]<<8)+modbus_buf[15];
+		 */
+		air_data->particulate_matter_25 = 1.2;
+		air_data->particulate_matter_10 = 3.4;
+		air_data->temperature_value = 5.6;
+		air_data->humidity_value = 7.8;
+		air_data->wind_direction = 9.0;
+		air_data->wind_speed_value = 10.11;
+		air_data->noise_value = 12.13;
+		air_data->atmospheric_pressure_value = 14.15;
+		break;
+	case 1:
+		res = modbus_read_registers(mb, 12, 4, modbus_buf);
+		air_data->particulate_matter_25 =
+		    (float)(modbus_buf[0] << 8) + modbus_buf[1];
+		air_data->particulate_matter_10 =
+		    (float)(modbus_buf[2] << 8) + modbus_buf[3];
+		air_data->temperature_value =
+		    (float)(modbus_buf[4] << 8) + modbus_buf[5];
+		air_data->humidity_value =
+		    (float)(modbus_buf[6] << 8) + modbus_buf[7];
+		air_data->wind_direction =
+		    (float)(modbus_buf[8] << 8) + modbus_buf[9];
+		air_data->wind_speed_value =
+		    (float)(modbus_buf[10] << 8) + modbus_buf[11];
+		air_data->noise_value =
+		    (float)(modbus_buf[12] << 8) + modbus_buf[13];
+		air_data->atmospheric_pressure_value =
+		    (float)(modbus_buf[14] << 8) + modbus_buf[15];
+		break;
+	default:
+		break;
+	}
+	  if (res)
+		 {
+		
+		    //  printf("%g %g \n",    air_data->particulate_matter_25,air_data->particulate_matter_10);
+		    return 1;
+		}
+	
+	else
+		 {
+		return 0;
+		}
+}
+
+/**
+初始化
+**/ 
+void modbus_init(void) 
+{
+	mb = modbus_new_rtu("/dev/ttyO3", 9600, 'N', 8, 1);	//open port
+	modbus_set_slave(mb, 1);	//set slave address
+	modbus_connect(mb);
+	struct timeval t;
+	t.tv_sec = 0;
+	t.tv_usec = 1000000;	//set modbus time 1000ms
+	modbus_set_response_timeout(mb, &t);
+} 

@@ -1,0 +1,225 @@
+# depslib dependency file v1.0
+1512107830 source:/home/sinyd210/work/arm-linux/air_collection/src/config.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"config.h"
+	"air_modbus.h"
+
+1512027506 /home/sinyd210/work/arm-linux/air_collection/include/config.h
+	"emsascommon.h"
+
+1512022748 /home/sinyd210/work/arm-linux/air_collection/include/emsascommon.h
+
+1512109322 /home/sinyd210/work/arm-linux/air_collection/include/air_modbus.h
+	"modbus.h"
+	"sqlite3.h"
+	"emsascommon.h"
+
+1512022748 /home/sinyd210/work/arm-linux/air_collection/include/modbus.h
+	<sys/param.h>
+	<stdint.h>
+	<sys/time.h>
+	"stdint.h"
+	<time.h>
+	"modbus-version.h"
+	"modbus-tcp.h"
+	"modbus-rtu.h"
+
+1516851275 /opt/B803/modbus/include/modbus/modbus-version.h
+
+1516851275 /opt/B803/modbus/include/modbus/modbus-tcp.h
+	"modbus.h"
+	<winsock2.h>
+
+1516851275 /opt/B803/modbus/include/modbus/modbus.h
+	<sys/param.h>
+	<stdint.h>
+	<sys/time.h>
+	"stdint.h"
+	<time.h>
+	"modbus-version.h"
+	"modbus-tcp.h"
+	"modbus-rtu.h"
+
+1516851275 /opt/B803/modbus/include/modbus/modbus-rtu.h
+	"modbus.h"
+
+1512022748 /home/sinyd210/work/arm-linux/air_collection/include/sqlite3.h
+	<stdarg.h>
+
+1512108785 source:/home/sinyd210/work/arm-linux/air_collection/src/main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"config.h"
+	"air_modbus.h"
+	"run4g.h"
+	"sqlite3.h"
+
+1512022748 /home/sinyd210/work/arm-linux/air_collection/include/run4g.h
+
+1512106174 source:/home/sinyd210/work/arm-linux/air_collection/src/modbus.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"air_modbus.h"
+	"config.h"
+
+1512108964 source:/home/sinyd210/work/arm-linux/air_collection/src/run4g.c
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<errno.h>
+	<unistd.h>
+	<sys/time.h>
+	<time.h>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<malloc.h>
+	<event.h>
+	<event2/util.h>
+	<event2/http.h>
+	"config.h"
+	"run4g.h"
+	"sqlite3.h"
+	"air_modbus.h"
+
+1516850030 /opt/B803/libevent/include/event2/event.h
+	<event2/event-config.h>
+	<sys/types.h>
+	<sys/time.h>
+	<stdio.h>
+	<event2/util.h>
+
+1512111003 source:/home/sinyd210/work/arm-linux/air_collection/src/sqlite_test.c
+	<stdio.h>
+	<sqlite3.h>
+	<malloc.h>
+	<sinyd_time.h>
+	"air_modbus.h"
+	"config.h"
+
+1512022748 /home/sinyd210/work/arm-linux/air_collection/include/sinyd_time.h
+	<sys/time.h>
+	<string.h>
+	<time.h>
+	<stdbool.h>
+	"emsascommon.h"
+
+1512022670 source:/home/sinyd210/work/arm-linux/air_collection/src/time.c
+	"sinyd_time.h"
+
+1516859336 source:/home/sinyd210/air_collection/src/config.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"config.h"
+	"air_modbus.h"
+
+1516860762 /home/sinyd210/air_collection/include/config.h
+	"emsascommon.h"
+
+1512022748 /home/sinyd210/air_collection/include/emsascommon.h
+
+1516861899 /home/sinyd210/air_collection/include/air_modbus.h
+	"modbus.h"
+	"sqlite3.h"
+	"emsascommon.h"
+
+1512022748 /home/sinyd210/air_collection/include/modbus.h
+	<sys/param.h>
+	<stdint.h>
+	<sys/time.h>
+	"stdint.h"
+	<time.h>
+	"modbus-version.h"
+	"modbus-tcp.h"
+	"modbus-rtu.h"
+
+1512022748 /home/sinyd210/air_collection/include/sqlite3.h
+	<stdarg.h>
+
+1516859583 source:/home/sinyd210/air_collection/src/main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"config.h"
+	"air_modbus.h"
+	"run4g.h"
+	"sqlite3.h"
+	"zlog.h"
+
+1516862557 /home/sinyd210/air_collection/include/run4g.h
+
+1380109122 /home/sinyd210/air_collection/include/zlog.h
+	<stdarg.h>
+	<stdio.h>
+
+1516849060 source:/home/sinyd210/air_collection/src/modbus.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"air_modbus.h"
+	"config.h"
+
+1516863103 source:/home/sinyd210/air_collection/src/run4g.c
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<errno.h>
+	<unistd.h>
+	<sys/time.h>
+	<time.h>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<malloc.h>
+	<event.h>
+	<event2/util.h>
+	<event2/http.h>
+	"config.h"
+	"run4g.h"
+	"sqlite3.h"
+	"air_modbus.h"
+
+1516850030 /opt/B803/libevent/include/event2/event-config.h
+
+1516850030 /opt/B803/libevent/include/event2/util.h
+	<event2/event-config.h>
+	<sys/time.h>
+	<stdint.h>
+	<inttypes.h>
+	<sys/types.h>
+	<stddef.h>
+	<BaseTsd.h>
+	<stdarg.h>
+	<netdb.h>
+	<winsock2.h>
+	<sys/socket.h>
+
+1516850030 /opt/B803/libevent/include/event2/http.h
+	<event2/util.h>
+
+1516862945 source:/home/sinyd210/air_collection/src/sqlite_test.c
+	<stdio.h>
+	<sqlite3.h>
+	<malloc.h>
+	<sinyd_time.h>
+	"air_modbus.h"
+	"config.h"
+
+1512022748 /home/sinyd210/air_collection/include/sinyd_time.h
+	<sys/time.h>
+	<string.h>
+	<time.h>
+	<stdbool.h>
+	"emsascommon.h"
+
+1516852804 source:/home/sinyd210/air_collection/src/time.c
+	"sinyd_time.h"
+	<stdio.h>
+

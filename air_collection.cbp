@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="air_collection" />
+		<Option pch_mode="2" />
+		<Option compiler="armelfgcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/air_collection" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="armelfgcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/home/sinyd210/work/arm-linux/air_collection/include" />
+					<Add directory="/opt/B803/modbus/include/modbus" />
+					<Add directory="/opt/B803/libevent/include/event2" />
+					<Add directory="/opt/B803/zlog/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-lrt" />
+					<Add option="-lpthread" />
+					<Add library="/opt/B803/libevent/lib/libevent.a" />
+					<Add library="/opt/B803/modbus/lib/libmodbus.so" />
+					<Add library="/home/sinyd210/air_collection/lib/libsqlite3.a" />
+					<Add library="/home/sinyd210/air_collection/lib/libsqlite3.so" />
+					<Add library="/home/sinyd210/air_collection/lib/libzlog.a" />
+					<Add library="/home/sinyd210/air_collection/lib/libzlog.so" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/air_collection" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="armelfgcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="/home/sinyd210/air_collection/include" />
+			<Add directory="/opt/B803/libevent/include/event2" />
+			<Add directory="/opt/B803/modbus/include/modbus" />
+			<Add directory="/opt/B803/libevent/include" />
+		</Compiler>
+		<Linker>
+			<Add library="/opt/B803/libevent/lib/libevent.a" />
+			<Add library="/opt/B803/modbus/lib/libmodbus.so" />
+		</Linker>
+		<Unit filename="include/air_db.h" />
+		<Unit filename="include/air_modbus.h" />
+		<Unit filename="include/config.h" />
+		<Unit filename="include/emsascommon.h" />
+		<Unit filename="include/log.h" />
+		<Unit filename="include/memento.h" />
+		<Unit filename="include/modbus.h" />
+		<Unit filename="include/run4g.h" />
+		<Unit filename="include/sinyd_time.h" />
+		<Unit filename="include/sqlite3.h" />
+		<Unit filename="include/sqlite3ext.h" />
+		<Unit filename="src/air_db.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/config.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/memento.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/modbus.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/run4g.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
